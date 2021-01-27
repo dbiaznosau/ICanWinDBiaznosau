@@ -50,7 +50,7 @@ public class PastebinTest {
 
             ResultPage resultCheck = new ResultPage(driver);
 
-            Assert.assertTrue(resultCheck.pastedCodeText().toString().contains(ConfProperties.getProperty("pasteCodeValue")));
+            Assert.assertTrue("Pasted and saved data is different!", resultCheck.pastedCodeText().toString().contains(ConfProperties.getProperty("pasteCodeValue")));
 
         }
        @AfterClass
